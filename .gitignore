@@ -1,0 +1,5 @@
+/submits/*
+/catboost_info/*
+/best_models/*
+/.ipynb_checkpoints/*
+/data/*
