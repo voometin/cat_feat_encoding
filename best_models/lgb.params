@@ -1,0 +1,1 @@
+{'learning_rate': 0.1, 'num_leaves': 11, 'min_data_in_leaf': 141, 'objective': 'binary', 'reg_alpha': 1, 'reg_lambda': 1, 'boosting': 'gbdt', 'feature_fraction': 0.11159440461908189, 'bagging_fraction': 0.7092434829167672, 'seed': 123, 'num_threads': 1, 'is_unbalance': True, 'metric': 'auc', 'verbosity': -1}
