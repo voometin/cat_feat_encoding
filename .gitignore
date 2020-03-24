@@ -1,6 +1,6 @@
-/submits/*
-/catboost_info/*
-/best_models/*
-/.ipynb_checkpoints/*
-/data/*
-/.idea/*
+/submits/
+/catboost_info/
+/best_models/
+/.ipynb_checkpoints/
+/data/
+/.idea/
