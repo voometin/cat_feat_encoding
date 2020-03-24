@@ -62,8 +62,7 @@ class Preprocessor:
 
         for ind, col in enumerate(self.label_encoding_columns):
             X.loc[~X[col].isin(list(self.le[ind].categories_[0])), col] = np.nan
-            X.loc[~X[col].isna(), col] = self.le[ind].transform(
-                X.loc[~X[col].isna(), col].values.reshape(-1, 1))  # .astype(int)
+            X.loc[~X[col].isna(), col] = self.le[ind].transform( X.loc[~X[col].isna(), col].values.reshape(-1, 1)) # .astype(int)
 
         for col in self.custom_transform:
             if type(self.custom_transform[col]) is dict:
@@ -90,3 +89,5 @@ class Preprocessor:
         if self.drop_columns:
             X = X.drop(self.drop_columns, axis=1)
         return X
+
+
