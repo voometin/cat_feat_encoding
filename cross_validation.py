@@ -30,7 +30,7 @@ def cross_validation(cv, model, features, target, metrics=(roc_auc_score,), verb
 
     for train_index, val_index in cv.split(features, target):
         train_features, val_features = features[train_index], features[val_index]
-        train_target, val_target =  target[train_index], target[val_index]
+        train_target, val_target = target[train_index], target[val_index]
 
         if type(model) in [lgb.LGBMClassifier, catboost.CatBoostClassifier]:
             train_params['fit_params'].update({'eval_set': [(val_features, val_target)]})
