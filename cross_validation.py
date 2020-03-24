@@ -13,9 +13,7 @@ def cross_validation(cv, model, features, target, metrics=(roc_auc_score,), verb
     :param target: 'list or 1darray'
     :param metrics: 'list or tuple or set of functions'
     :param verbose: bool
-    :param train_params: dict - e.g. {'modeltype': either 'lgb' or 'catboost' or None(default),
-                                      'catboost_cat_features': list of indexes or None(default),
-                                      'fit_params': dict}
+    :param train_params: dict - e.g. {'parans': dict, 'fit_params': dict}
     :return: dict - e.g. {metric.__name__: {'train': list(len=cv.n_splits),
                                             'val': list,
                                             'train_mean': float,
@@ -26,7 +24,6 @@ def cross_validation(cv, model, features, target, metrics=(roc_auc_score,), verb
     scores = {}
     for metric in metrics:
         scores[metric.__name__] = {'train': [], 'val': []}
-    # modeltype = train_params.pop('modeltype', None)
 
     for train_index, val_index in cv.split(features, target):
         train_features, val_features = features[train_index], features[val_index]
