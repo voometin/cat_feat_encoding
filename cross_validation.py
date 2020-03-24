@@ -82,3 +82,6 @@ def cross_validation(cv, model, features, target, metrics=(roc_auc_score,), verb
                 print(f"{key.upper()}: {scores[metric.__name__][key]} ({scores[metric.__name__][key + '_mean']})")
 
     return scores, model
+
+if __name__ == '__main__':
+    print(cross_validation.__doc__)
