@@ -71,4 +71,8 @@ def cross_validation(cv, model, features, target, metrics=(roc_auc_score,), verb
 
 
 if __name__ == '__main__':
-    print(cross_validation.__doc__)
+    print(321)
+    print(32, 'sdfsd')
+    print(cross_validation.__doc__, 1)
+    print(123)
+    print()
